@@ -2,6 +2,11 @@ import fs from 'fs/promises';
 import { pathToFile } from '../utils.js';
 import { join } from 'path';
 
+/**
+ * Deletes a file
+ * @param {string} folderName - The name of the folder where the file 
+ * @param {string} fileName - The name of the file.
+ */
 const remove = async (folderName, fileName) => {
     const pathToCurrentFile = pathToFile(import.meta.url);
     const pathToFileForDel = join(pathToCurrentFile, folderName, fileName);
