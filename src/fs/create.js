@@ -11,7 +11,6 @@ import { join } from 'path';
  * @param {string} fileName - The name of the file.
  * @param {string} data - The data to be written to the file.
  */
-
 const create = async (folderName, fileName, data) => {
     const pathToCurrentFile = pathToFile(import.meta.url);
     const finalPath = join(pathToCurrentFile, folderName, fileName);
@@ -31,6 +30,6 @@ const create = async (folderName, fileName, data) => {
 
 const FOLDER_NAME = 'files';
 const FILE_NAME = 'fresh.txt';
-const DATA = 'I am fresh and young';
+const TEXT = 'I am fresh and young';
 
-await create(FOLDER_NAME, FILE_NAME, DATA);
+await create(FOLDER_NAME, FILE_NAME, TEXT);
