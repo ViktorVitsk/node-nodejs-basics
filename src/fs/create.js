@@ -14,7 +14,6 @@ import { join } from 'path';
 const create = async (folderName, fileName, data) => {
     const pathToCurrentFile = pathToFile(import.meta.url);
     const finalPath = join(pathToCurrentFile, folderName, fileName);
-    const fileCreateError = new Error('FS operation failed');
 
     try {
         await fs.access(finalPath, fs.constants.F_OK);
