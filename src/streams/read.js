@@ -15,6 +15,11 @@ const read = async (folderName, fileName) => {
     const readStream = fs.createReadStream(finalPath);
 
     readStream.pipe(process.stdout);
+
+    // to wrap to a new line in the console for better readability
+    readStream.on('end', () => {
+        process.stdout.write('\n');
+    });
 };
 
 const FOLDER = 'files';
